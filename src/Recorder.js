@@ -1,9 +1,9 @@
 'use strict'
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Recorder = React.createClass({
+class Recorder extends Component {
   start () {
     this.mediaRecorder.start()
   },
@@ -96,6 +96,6 @@ const Recorder = React.createClass({
     blobOpts: PropTypes.object,
     mediaOpts: PropTypes.object
   }
-})
+}
 
 export default Recorder
