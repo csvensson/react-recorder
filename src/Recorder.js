@@ -21,7 +21,8 @@ class Recorder extends Component {
   };
 
   componentDidMount () {
-    navigator.getUserMedia = (navigator.getUserMedia ||
+    navigator.getUserMedia = ((navigator.mediaDevices && navigator.mediaDevices.getUserMedia) ||
+                              navigator.getUserMedia ||
                               navigator.mozGetUserMedia ||
                               navigator.msGetUserMedia ||
                               navigator.webkitGetUserMedia)
